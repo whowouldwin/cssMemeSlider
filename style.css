@@ -86,7 +86,7 @@ body {
   background-color: #f0f0f0;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 764px) {
   .slider {
     width: 90vw;
   }
@@ -116,6 +116,7 @@ body {
   }
   .description {
     flex-direction: column;
+    margin-top: 1rem;
   }
   .meme-text {
     display: flex;
