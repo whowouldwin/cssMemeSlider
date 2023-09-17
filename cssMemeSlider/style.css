@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.slider {
+  width: 60vw;
+  max-width: 600px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 400%;
+}
+
+.slider-item {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.meme-text {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 400%;
+  /*white-space: nowrap;*/
+}
+
+.caption-controls {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.slide-caption {
+  color: white;
+  flex-grow: 1;
+  display: none;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+.controls label {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 10px; /* Увеличивает область нажатия */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.control {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(45, 101, 224);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+.controls label:checked .control {
+  background-color: #00cd85;
+}
+.controls label:hover .control {
+  background-color: #faf9f9;
+}
+
+.controls label:active .control {
+  background-color: #62625f;
+}
+@media (max-width: 764px) {
+  .slider {
+    width: 90vw;
+  }
+
+  .slider-item {
+    flex-direction: column;
+  }
+
+  .caption-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .slide-caption {
+    font-size: 0.9rem;
+    text-align: center;
+    order: 2;
+  }
+
+  .controls {
+    order: 1;
+    justify-content: center;
+  }
+
+  .description {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .meme-text {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+}
+
+/* Slider Controls */
+.slider-control {
+  display: none;
+}
+
+#slide1-control:checked ~ .slider-items,
+#slide1-control:checked ~ .description .meme-text {
+  transform: translateX(0);
+}
+
+#slide2-control:checked ~ .slider-items,
+#slide2-control:checked ~ .description .meme-text {
+  transform: translateX(-25%);
+}
+
+#slide3-control:checked ~ .slider-items,
+#slide3-control:checked ~ .description .meme-text {
+  transform: translateX(-50%);
+}
+
+#slide4-control:checked ~ .slider-items,
+#slide4-control:checked ~ .description .meme-text {
+  transform: translateX(-75%);
+}
+
+/* display the corresponding caption */
+#slide1-control:checked ~ .description .meme-text .caption-controls:nth-child(1) .slide-caption,
+#slide2-control:checked ~ .description .meme-text .caption-controls:nth-child(2) .slide-caption,
+#slide3-control:checked ~ .description .meme-text .caption-controls:nth-child(3) .slide-caption,
+#slide4-control:checked ~ .description .meme-text .caption-controls:nth-child(4) .slide-caption {
+  display: flex;
+}
+
+
+
+
+
