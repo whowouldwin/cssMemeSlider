@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.slider {
+  width: 60vw;
+  max-width: 600px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 400%;
+}
+
+.slider-item {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.caption-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.slide-caption {
+  color: white;
+  transition: transform 0.5s ease;
+  text-align: left;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+}
+
+.control {
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.control:hover {
+  background-color: #ffffff;
+}
+
+@media (max-width: 570px) {
+  .slider {
+    width: 90vw;
+  }
+
+  .slider-item {
+    flex-direction: column;
+  }
+
+  .caption-controls {
+    flex-direction: column;
+  }
+
+  .slide-caption {
+    font-size: 0.8rem;
+    text-align: center;
+    order: 2;
+  }
+
+  .controls {
+    order: 1;
+  }
+
+  .control {
+    padding: 0.3rem;
+  }
+}
+
+/* Slider Controls */
+.slider-control {
+  display: none;
+}
+
+#slide1-control:checked ~ .slider-items {
+  transform: translateX(0);
+}
+
+#slide2-control:checked ~ .slider-items {
+  transform: translateX(-25%);
+}
+
+#slide3-control:checked ~ .slider-items {
+  transform: translateX(-50%);
+}
+
+#slide4-control:checked ~ .slider-items {
+  transform: translateX(-75%);
+}

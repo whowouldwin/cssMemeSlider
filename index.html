@@ -10,26 +10,47 @@
 </head>
 <body>
 <div class="slider">
+  <input type="radio" name="slider" id="slide1-control" class="slider-control">
+  <input type="radio" name="slider" id="slide2-control" class="slider-control">
+  <input type="radio" name="slider" id="slide3-control" class="slider-control">
+  <input type="radio" name="slider" id="slide4-control" class="slider-control">
+
   <div class="slider-items">
     <div id="slide1" class="slider-item">
-      <img src="./Images" alt="slide1">
-      <p class="slide-caption">Slide1</p>
-    </div>
-    <div id="slide2" class="slider-item">
-      <img src="./Images" alt="slide2">
-      <p class="slide-caption">Slide2</p>
-    </div>
-    <div id="slide3" class="slider-item">
-      <img src="./Images" alt="slide3">
-      <p class="slide-caption">Slide3</p>
-    </div>
-    <div id="slide4" class="slider-item">
-      <img src="./Images" alt="slide4">
-      <p class="slide-caption">Slide4</p>
-    </div>
-    <div class="controls">
+      <img src="./Images/image1.JPG" alt="slide1" class="slider-image">
+      <div class="caption-controls">
+        <p class="slide-caption">Brainstorming</p>
+      </div>
 
     </div>
+    <div id="slide2" class="slider-item">
+      <img src="./Images/image2.JPG" alt="slide2" class="slider-image">
+      <div class="caption-controls">
+        <p class="slide-caption">Step by step debugging</p>
+      </div>
+    </div>
+
+    <div id="slide3" class="slider-item">
+      <img src="./Images/image3.JPG" alt="slide3" class="slider-image">
+      <div class="caption-controls">
+        <p class="slide-caption">Trivial bag</p>
+      </div>
+
+    </div>
+    <div id="slide4" class="slider-item">
+      <img src="./Images/image4.JPG" alt="slide4" class="slider-image">
+      <div class="caption-controls">
+        <p class="slide-caption">Planned vs Budgeted</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="controls">
+    <label class="control" for="slide1-control"></label>
+    <label class="control" for="slide2-control"></label>
+    <label class="control" for="slide3-control"></label>
+    <label class="control" for="slide4-control"></label>
   </div>
 </div>
 </body>
